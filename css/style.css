@@ -169,7 +169,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--primary-headline-color-theme-light);
+  transform: var(--transition-duration-and-func);
 }
 
 .menu-link:hover,
@@ -199,6 +199,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color-theme-light);
+  transition: var(--transition-duration-and-func);
 }
 
 .contacts-tel {
@@ -206,6 +207,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color-theme-light);
+  transition: var(--transition-duration-and-func);
 }
 
 .contacts-mail:hover,
