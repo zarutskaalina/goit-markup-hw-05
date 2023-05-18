@@ -8,6 +8,7 @@
   --accent-color: #4d5ae5;
   --list-buttons-color: #404bbf;
   --icon-color: #8e8f99;
+  --transition-duration-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list {
@@ -84,6 +85,7 @@ body {
 .modal-open-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--list-buttons-color);
+  transition: var(--transition-duration-and-func);
 }
 
 .list-modal-open-btn {
@@ -107,6 +109,7 @@ body {
   border: 1px solid transparent;
   background: var(--list-buttons-color);
   color: var(--primary-text-color-theme-dark);
+  transition: var(--transition-duration-and-func);
 }
 /* ================= /COMPONENTS ================= */
 
@@ -171,6 +174,7 @@ body {
 .menu-link:focus {
   text-decoration: none;
   color: var(--accent-color);
+  transition: var(--transition-duration-and-func);
 }
 
 .contacts-data {
@@ -195,11 +199,13 @@ body {
 .contacts-mail:hover,
 .contacts-mail:focus {
   color: var(--accent-color);
+  transition: var(--transition-duration-and-func);
 }
 
 .contacts-tel:hover,
 .contacts-tel:focus {
   color: var(--accent-color);
+  transition: var(--transition-duration-and-func);
 }
 
 /* ================= /HEADER ================= */
@@ -238,6 +244,7 @@ body {
 .gallery-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: var(--transition-duration-and-func);
 }
 
 .description-gallery-filters {
@@ -263,7 +270,36 @@ body {
   color: var(--primary-text-color-theme-light);
 }
 /* ================= /FILTERS ================= */
+/* ================= OVERLAY ================= */
 
+.overlay-gallery-filter-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px 0 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--secondary-color);
+  background: #4d5ae5;
+  transform: translateY(100%);
+  transition: transform 500ms linear;
+}
+
+.gallery-link:hover .overlay,
+.gallery-link:focus .overlay {
+  transform: translateY(0%);
+}
+
+/* ================= /OVERLAY ================= */
 /* ================= HERO ================= */
 
 .hero-img {
@@ -458,6 +494,7 @@ body {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: #404bbf;
+  transition: var(--transition-duration-and-func);
 }
 /* ================= /EMPLOYEES ================= */
 /* ================= CUSTOMERS ================= */
@@ -503,6 +540,7 @@ body {
 .client-logo-link:focus {
   color: #404bbf;
   border-color: #404bbf;
+  transition: var(--transition-duration-and-func);
 }
 /* ================= /CUSTOMERS ================= */
 /* ================= /MAIN CONTENT================= */
@@ -557,6 +595,66 @@ body {
 .social-item:hover,
 .social-item:focus {
   background-color: #31d0aa;
+  transition: var(--transition-duration-and-func);
 }
 
 /* ================= /FOOTER ================= */
+
+/* ================= MODAL WINDOW ================= */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  height: 584px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  padding: 0;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background: #e7e9fc;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  fill: #2e2f42;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background: #404bbf;
+  fill: #ffffff;
+  transition: var(--transition-duration-and-func);
+}
+
+.modal-close-btn-icon {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= /MODAL WINDOW ================= */
