@@ -8,7 +8,7 @@
   --accent-color: #4d5ae5;
   --list-buttons-color: #404bbf;
   --icon-color: #8e8f99;
-  --transition-duration-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration-and-func: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list {
@@ -85,7 +85,7 @@ body {
 .modal-open-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--list-buttons-color);
-  transition: var(--transition-duration-and-func);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-modal-open-btn {
@@ -160,6 +160,8 @@ body {
 }
 
 .menu-link {
+  position: relative;
+  color: #404bbf;
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
@@ -174,6 +176,16 @@ body {
 .menu-link:focus {
   text-decoration: none;
   color: var(--accent-color);
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
   transition: var(--transition-duration-and-func);
 }
 
@@ -205,7 +217,6 @@ body {
 .contacts-tel:hover,
 .contacts-tel:focus {
   color: var(--accent-color);
-  transition: var(--transition-duration-and-func);
 }
 
 /* ================= /HEADER ================= */
@@ -494,7 +505,7 @@ body {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: #404bbf;
-  transition: var(--transition-duration-and-func);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ================= /EMPLOYEES ================= */
 /* ================= CUSTOMERS ================= */
@@ -540,7 +551,8 @@ body {
 .client-logo-link:focus {
   color: #404bbf;
   border-color: #404bbf;
-  transition: var(--transition-duration-and-func);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ================= /CUSTOMERS ================= */
 /* ================= /MAIN CONTENT================= */
