@@ -200,13 +200,7 @@ body {
   gap: 40px;
 }
 
-.contacts-mail {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color-theme-light);
-}
-
+.contacts-mail,
 .contacts-tel {
   font-size: 16px;
   line-height: 1.5;
