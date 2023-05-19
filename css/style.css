@@ -186,9 +186,13 @@ body {
   left: 0;
   bottom: -1px;
   width: 48px;
-  height: 4px;
+  height: 0px;
   background-color: #404bbf;
   border-radius: 2px;
+}
+
+.menu-link:hover::after {
+  height: 4px;
 }
 
 .contacts-data {
@@ -214,12 +218,12 @@ body {
 
 .contacts-mail:hover,
 .contacts-mail:focus {
-  color: var(--accent-color);
+  color: #404bbf;
 }
 
 .contacts-tel:hover,
 .contacts-tel:focus {
-  color: var(--accent-color);
+  color: #404bbf;
 }
 
 /* ================= /HEADER ================= */
