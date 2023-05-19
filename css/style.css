@@ -185,14 +185,14 @@ body {
   position: absolute;
   left: 0;
   bottom: -1px;
-  width: 48px;
-  height: 0px;
+  width: 0px;
+  height: 4px;
   background-color: #404bbf;
   border-radius: 2px;
 }
 
 .menu-link:hover::after {
-  height: 4px;
+  width: 48px;
 }
 
 .contacts-data {
