@@ -180,7 +180,7 @@ body {
   color: #404bbf;
 }
 
-.menu-link::after {
+.menu-link:hover::after {
   content: "";
   position: absolute;
   left: 0;
