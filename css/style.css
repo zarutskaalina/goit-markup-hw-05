@@ -8,7 +8,6 @@
   --accent-color: #4d5ae5;
   --list-buttons-color: #404bbf;
   --icon-color: #8e8f99;
-  --transition-duration-and-func: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list {
@@ -173,7 +172,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  transition: var(--transition-duration-and-func);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -260,7 +259,6 @@ body {
 .gallery-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: var(--transition-duration-and-func);
 }
 
 .description-gallery-filters {
@@ -612,7 +610,6 @@ body {
 .social-item:hover,
 .social-item:focus {
   background-color: #31d0aa;
-  transition: var(--transition-duration-and-func);
 }
 
 /* ================= /FOOTER ================= */
